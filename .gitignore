@@ -1,0 +1,23 @@
+.idea/
+react-dapp/node_modules/
+react-dapp/node_modules
+react-dapp/.pnp
+react-dapp/.pnp.js
+
+# testing
+react-dapp/coverage
+
+# production
+react-dapp/build
+
+# misc
+react-dapp/.DS_Store
+react-dapp/.env.local
+react-dapp/.env.development.local
+react-dapp/.env.test.local
+react-dapp/.env.production.local
+
+react-dapp/npm-debug.log*
+react-dapp/yarn-debug.log*
+react-dapp/yarn-error.log*
+
