@@ -71,7 +71,7 @@
 
 ## Create a sample contract
 
-1. create a sample contract
+1. create a sample contract 
     - Create a `contracts` directory in the root directory
     - Create a `Greeting.sol` file in the `contracts` directory
     - Add the following code to file:
@@ -105,93 +105,93 @@
 3. Add testAccount in metamask using private key. This should display the test account balance in metamask. This will require public key of the reciever bank. Copy it from the metamask.
 
 4. You can try sending from your newly created/imported account to another TEST account in metamask. This will though some warnings/errors in hardhat console like-
-```shell
-eth_call
-  WARNING: Calling an account which is not a contract
-  From: 0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
-  To:   0x5b07003baf157b988b853ea80c2e75e7f18743c9
-
-eth_call
-  WARNING: Calling an account which is not a contract
-  From: 0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
-  To:   0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
-
-eth_call
-  WARNING: Calling an account which is not a contract
-  From: 0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
-  To:   0x5b07003baf157b988b853ea80c2e75e7f18743c9
-
-eth_call
-  WARNING: Calling an account which is not a contract
-  From: 0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
-  To:   0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
-
-eth_call
-  WARNING: Calling an account which is not a contract
-  From: 0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
-  To:   0x5b07003baf157b988b853ea80c2e75e7f18743c9
-
-eth_call
-  WARNING: Calling an account which is not a contract
-  From: 0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
-  To:   0x5b07003baf157b988b853ea80c2e75e7f18743c9
-
-eth_call
-  WARNING: Calling an account which is not a contract
-  From: 0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
-  To:   0x5b07003baf157b988b853ea80c2e75e7f18743c9
-
-eth_call
-  WARNING: Calling an account which is not a contract
-  From: 0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
-  To:   0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
-
-eth_call
-  WARNING: Calling an account which is not a contract
-  From: 0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
-  To:   0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
-
-eth_blockNumber (4)
-eth_getTransactionCount
-eth_sendRawTransaction
-  Transaction: 0x41d5e8ba2d801f6d73db5d11676d30fd22f2cade73717457ac3bca1cd42d47fc
-  From:        0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
-  To:          0x5b07003baf157b988b853ea80c2e75e7f18743c9
-  Value:       1. ETH
-  Gas used:    21000 of 21000
-  Block #1:    0x9cd7ebc0b7e52e6bd08fb6b9fd755b73de177ce6a15de33fbc3b9c187caf558e
-```
+    ```shell
+    eth_call
+      WARNING: Calling an account which is not a contract
+      From: 0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
+      To:   0x5b07003baf157b988b853ea80c2e75e7f18743c9
+    
+    eth_call
+      WARNING: Calling an account which is not a contract
+      From: 0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
+      To:   0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
+    
+    eth_call
+      WARNING: Calling an account which is not a contract
+      From: 0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
+      To:   0x5b07003baf157b988b853ea80c2e75e7f18743c9
+    
+    eth_call
+      WARNING: Calling an account which is not a contract
+      From: 0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
+      To:   0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
+    
+    eth_call
+      WARNING: Calling an account which is not a contract
+      From: 0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
+      To:   0x5b07003baf157b988b853ea80c2e75e7f18743c9
+    
+    eth_call
+      WARNING: Calling an account which is not a contract
+      From: 0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
+      To:   0x5b07003baf157b988b853ea80c2e75e7f18743c9
+    
+    eth_call
+      WARNING: Calling an account which is not a contract
+      From: 0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
+      To:   0x5b07003baf157b988b853ea80c2e75e7f18743c9
+    
+    eth_call
+      WARNING: Calling an account which is not a contract
+      From: 0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
+      To:   0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
+    
+    eth_call
+      WARNING: Calling an account which is not a contract
+      From: 0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
+      To:   0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
+    
+    eth_blockNumber (4)
+    eth_getTransactionCount
+    eth_sendRawTransaction
+      Transaction: 0x41d5e8ba2d801f6d73db5d11676d30fd22f2cade73717457ac3bca1cd42d47fc
+      From:        0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
+      To:          0x5b07003baf157b988b853ea80c2e75e7f18743c9
+      Value:       1. ETH
+      Gas used:    21000 of 21000
+      Block #1:    0x9cd7ebc0b7e52e6bd08fb6b9fd755b73de177ce6a15de33fbc3b9c187caf558e
+    ```
 
 ## Deploy the contract
 
 1. Create a `scripts` directory in the root directory
 2. Create a `deploy.js` file in the `scripts` directory
 3. Add the following code to the `deploy.js` file:
-```javascript
-    // require the Hardhat Runtime Environment explicitly
-    // This is optional when running scripts with `npx hardhat run <script>`
-    // but useful for running the script in a standalone fashion
-    // or testing the script.
-    const hre = require("hardhat");
-    
-    async function main() {
-        // hardhat always run the compile task(byte-code) when running a script with its cli.
-        // If you want to run the compile task manually, you can use `await hre.run('compile');`
+    ```javascript
+        // require the Hardhat Runtime Environment explicitly
+        // This is optional when running scripts with `npx hardhat run <script>`
+        // but useful for running the script in a standalone fashion
+        // or testing the script.
+        const hre = require("hardhat");
         
-        // get the contract to deploy
-        const Greeter = await hre.ethers.getContractFactory("Greeter");
-        const greeter = await Greeter.deploy("Hello, Hardhat!");
-        
-        await greeter.deployed();
-        console.log("Greeter deployed to:", greeter.address);
-    }
-    main()
-      .then(() => process.exit(0))
-      .catch((error) => {
-        console.error(error);
-        process.exit(1);
-      });
-```
+        async function main() {
+            // hardhat always run the compile task(byte-code) when running a script with its cli.
+            // If you want to run the compile task manually, you can use `await hre.run('compile');`
+            
+            // get the contract to deploy
+            const Greeter = await hre.ethers.getContractFactory("Greeter");
+            const greeter = await Greeter.deploy("Hello, Hardhat!");
+            
+            await greeter.deployed();
+            console.log("Greeter deployed to:", greeter.address);
+        }
+        main()
+          .then(() => process.exit(0))
+          .catch((error) => {
+            console.error(error);
+            process.exit(1);
+          });
+    ```
 
 4. Run the deploy script
     ```shell
@@ -218,8 +218,89 @@ eth_sendRawTransaction
     
     eth_chainId
    ```
-   - Keep track of Greeter contract address. Here `0x5fbdb2315678afecb367f032d93f642f64180aa3`
+   - Keep track of Greeter contract address. ex: Here `0x5fbdb2315678afecb367f032d93f642f64180aa3`
    - This deployment will be required every time node starts. So, you can create a script to automate this process.
 
 ## Interact with the contract
+1. Edit the `src/App.js` file in the `react-dapp` directory
 
+2. Add the following code to the `App.js` file:
+    ```javascript
+    import logo from './logo.svg';
+    import './App.css';
+    
+    import {useState} from 'react';
+    import {ethers} from 'ethers'; // acts like backend for the dapp
+    import Greeter from './artifacts/contracts/Greeter.sol/Greeter.json';
+    
+    
+    const greeterAddress = "0x5fbdb2315678afecb367f032d93f642f64180aa3"; // replace with your deployed contract address
+    
+    function App() {
+    const [greetingState, setGreetingValueState] = useState();
+
+    async function requestAccount() {
+        await window.ethereum.request({ method: 'eth_requestAccounts' });
+    }
+
+    async function fetchGreeting() {
+        if (typeof window.ethereum !== 'undefined') {
+            const provider = new ethers.providers.Web3Provider(window.ethereum);
+
+            const contract = new ethers.Contract(greeterAddress, Greeter.abi, provider);
+            try {
+                const data = await contract.greet();
+                console.log('data: ', data);
+            } catch (err) {
+                console.error("Error fetching greeting:", err);
+            }
+        } else {
+            console.log("Ethereum object not found. Install MetaMask.");
+        }
+    }
+
+    async function setGreeting() {
+    if (!greetingState) return;
+        if (typeof window.ethereum !== 'undefined') {
+            await requestAccount();
+            const provider = new ethers.providers.Web3Provider(window.ethereum);
+            const signer = provider.getSigner(); // get the signer to sign transactions
+            const contract = new ethers.Contract(greeterAddress, Greeter.abi, signer);
+
+            try {
+                const transaction = await contract.setGreeting(greetingState);
+                await transaction.wait();
+                console.log('Transaction successful:', transaction);
+                await fetchGreeting()
+            } catch (err) {
+                console.error("Error setting greeting:", err);
+            }
+        } else {
+            console.log("Ethereum object not found. Install MetaMask.");
+        }
+    }
+
+    return (
+        <div className="App">
+         <header className="App-header">
+             <button onClick={fetchGreeting}>Fetch Greeting</button>
+             <button onClick={setGreeting}>Set Greeting</button>
+             <input onChange={e=> setGreetingValueState(e.target.value)} placeholder="Set greeting" />
+         </header>
+        </div>
+     );
+    }
+    
+    export default App;
+    ```
+   
+3. Start the React app
+    ```shell
+    npm start
+    ```
+   This will start the React app on `http://localhost:3000` where you can interact with the contract.
+
+4. Open the React app in your browser and interact with the contract using the buttons and input field.
+   - Click on "Fetch Greeting" to fetch the current greeting from the contract.
+   - Enter a new greeting in the input field and click on "Set Greeting" to set a new greeting in the contract.
+   - You should see the greeting being updated in the console and in the contract state.

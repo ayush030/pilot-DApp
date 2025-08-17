@@ -9,6 +9,8 @@ async function main() {
 
     // get the contract to deploy
     const Greeter = await hre.ethers.getContractFactory("Greeter");
+
+    // this will call the constructor of the Greeter contract
     const greeter = await Greeter.deploy("Hello, Hardhat!");
 
     await greeter.deployed();
