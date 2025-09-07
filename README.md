@@ -304,3 +304,70 @@
    - Click on "Fetch Greeting" to fetch the current greeting from the contract.
    - Enter a new greeting in the input field and click on "Set Greeting" to set a new greeting in the contract.
    - You should see the greeting being updated in the console and in the contract state.
+
+## Token exchange
+1. Create a Token contract for enabling exchange medium.
+    - Create a `Token.sol` file in the `contracts` directory
+    - Add the Token contract and required methods to file:
+    ```solidity
+    pragma solidity ^0.8.0;
+
+    import "hardhat/console.sol";
+    
+    contract Token {
+        string public name = "Recluze token";
+        string public symbol = "REC";
+        uint public totalSupply = 1000;
+    
+        mapping(address => uint) balances;
+       
+        constructor() {
+            // assign all initial tokens to the contract's creator
+            balances[msg.sender] = totalSupply;
+        }
+    
+        function transfer(address to, uint amount) external {
+            // ensure the sender has enough tokens to send
+            require(balances[msg.sender] >= amount, "Insufficient tokens");
+    
+            // decrease the balance of the sender from the lookup table
+            balances[msg.sender] -= amount;
+    
+            // increase the balance of the recipient
+            balances[to] += amount;
+        }
+    
+        function balanceOf(address account) external view returns(uint) {
+            return balances[account];
+        }
+   }
+    ```
+
+    - Compile the contract
+    ```shell
+    npx hardhat compile
+    ``` 
+2. Update scripts/deploy.js to deploy Token contract
+    ```javascript
+        // get the Token contract to deploy
+        const Token = await hre.ethers.getContractFactory("Token");
+        const token = await Token.deploy();
+        
+        await token.deployed();
+        console.log("Token deployed to:", token.address);
+    ```
+3. Run the deploy script 
+    ```shell
+    npx hardhat run scripts/deploy.js --network localhost
+    Greeter deployed to: 0x5FbDB2315678afecb367f032d93F642f64180aa3
+    Token deployed to: 0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512
+    ```
+4. Add the newly created token(s) to wallet:
+    - Open metamask and select "Import tokens"
+    - Enter the Token contract address displayed in the console after deployment. ex: Here `0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512`
+    - Click on "Add Custom Token"
+    - Click on "Import Tokens"
+    - This should display the token balance in metamask
+
+
+5. You can now send tokens from one account to another using metamask.
