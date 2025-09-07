@@ -9,13 +9,20 @@ async function main() {
 
     // get the contract to deploy
     const Greeter = await hre.ethers.getContractFactory("Greeter");
-
     // this will call the constructor of the Greeter contract
     const greeter = await Greeter.deploy("Hello, Hardhat!");
 
+    // get the Token contract and deploy it
+    const Token = await hre.ethers.getContractFactory("Token");
+    const token = await Token.deploy();
+
     await greeter.deployed();
     console.log("Greeter deployed to:", greeter.address);
+
+    await token.deployed();
+    console.log("Token deployed to:", token.address);
 }
+
 main()
     .then(() => process.exit(0))
     .catch((error) => {

@@ -15,6 +15,8 @@ contract Greeter {
         greeting = _greeting;
     }
 
+    // the functions defined here will be exported by the contract, so that they can be called from other contracts or transactions
+
     // read rule
     function greet() public view returns (string memory) {
         return greeting;

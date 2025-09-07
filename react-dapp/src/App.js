@@ -6,7 +6,8 @@ import {ethers} from 'ethers'; // acts like backend for the dapp
 import Greeter from './artifacts/contracts/Greeter.sol/Greeter.json'; // import the contract ABI(application binary interface)
 
 
-const greeterAddress = "0x5fbdb2315678afecb367f032d93f642f64180aa3"; // replace with your deployed contract address
+const greeterAddress = "0x5fbdb2315678afecb367f032d93f642f64180aa3"; // greeter deployed contract address
+const tokenAddress = "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512" //  token deployed token contract address
 
 function App() {
     // store greeting in local state of react. Has nothing to do with smart contract.
